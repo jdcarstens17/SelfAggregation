@@ -1,1 +1,87 @@
+&PARAMETERS
+
+caseid ='512x512x64_3km_12s',
+
+nrestart = 1,
+nrestart_skip = 6,
+
+CEM = .true.,
+OCEAN = .true.,
+
+dosgs           = .true.,
+dosmagor        = .true.,
+doscalar        = .false.,
+dodamping       = .true.,
+doupperbound    = .false.,
+docloud         = .true.,
+doprecip        = .true.,
+dolongwave      = .true.,
+doshortwave     = .true.,
+dosurface       = .true.,
+dolargescale    = .false.,
+doradforcing    = .false.,
+docoriolis      = .true.,
+donudging_uv    = .false.,
+donudging_tq    = .false.,
+doradhomo 	= .false.,
+dowindhomo 	= .false.,
+
+dodynamicocean  = .false.,
+
+tauls = 7200.,
+
+SFC_FLX_FXD    = .false.,
+SFC_TAU_FXD    = .false.,
+
+longitude0 = 0.,
+! latitude0 = 19.45,
+latitude0 = 0.,
+
+nrad = 30,
+
+dx =    3000.,
+dy =    3000.,
+
+dt =    12.,
+
+tabs_s=305.0,
+fcor = 1.52e-5,
+
+! day0=80.5,
+day0=0.,
+doseasons = .false.,
+doisccp = .false.,
+doperpetual = .true.,
+dosolarconstant = .true.,
+solar_constant = 650.83,
+zenith_angle = 50.5,
+
+dowally = .false.,
+
+efrac = 1.0,
+xcenter_land = 6144000.0,
+xlen_land    =  0.0,
+hml_land = 0.05,
+
+nstop   = 720000,
+nelapse = 720000,
+nprint  = 300,
+nstat   = 300,
+nstatfrq= 30,
+
+doSAMconditionals = .true.
+dosatupdnconditionals = .true.
+
+save2Davg = .true.,
+nsave2D = 300,
+nsave2Dstart    = 0,
+nsave2Dend      = 9999999,
+
+nsave3D = 300,
+nsave3Dstart    = 0,
+nsave3Dend      = 999999999,
+save3Dbin      = .false.
+
+/
+
 
