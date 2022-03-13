@@ -47,3 +47,28 @@ This file contains vertical profiles of domain-averaged thermodynamic variables 
 
 # FMSEVarianceBudget.nc
 
+This file contains time series of all feedbacks (including their decompositions) to the FMSE spatial variance budget of Wing and Emanuel (2014), for the f-plane simulations studied in Carstens and Wing (2022). These are used to generate Figures 3-6 in the manuscript, and also include the dates of tropical cyclogenesis and lifetime maximum intensity for the high-f simulations (as in Figure 4). Variables are described below, expressed in terms of (f,m,t) - the effective latitude corresponding to the Coriolis parameter (in increasing order), the ensemble member, and the day (daily-averaged). NaN values indicate that a particular ensemble member is not run for a given f-plane, since the ensembles are of varying size. The feedbacks represent correlations between anomalies of FMSE and that particular variable in question.
+
+1. VAR - Daily and domain-averaged variance of frozen moist static energy (FMSE, J^2/m^4)
+2. VAR_TEN - Tendency of FMSE variance (i.e. what the budget solves for, J^2/(s m^4))
+3. ADV - Advective feedback, representing changes in FMSE variance due to mesoscale circulations. This is calculated as a residual from VAR_TEN and DIAB (J^2/(s m^4))
+4. DIAB - Diabatic feedback, the sum of the longwave, shortwave, and surface flux feedbacks. LW+SW+SEF (J^2/(s m^4))
+5. SEF - Surface flux feedback, decomposed into latent and sensible heat flux components which can be broken down further (J^2/(s m^4))
+6. LHF - Latent heat flux feedback, which adds into SEF (J^2/(s m^4))
+7. SHF - Sensible heat flux feedback, which adds with LHF into SEF (J^2/(s m^4))
+8. LW - Longwave radiative feedback, which can be decomposed into clear-sky and cloud components (J^2/(s m^4))
+9. LW_CLOUD - Cloud longwave feedback, which adds into LW (J^2/(s m^4))
+10. LW_CLEAR - Clear-sky longwave feedback, which adds with LW_CLOUD into LW (J^2/(s m^4))
+11. SW - Shortwave radiative feedback, which can be decomposed into clear-sky and cloud components (J^2/(s m^4))
+12. SW_CLOUD - Cloud shortwave feedback, which adds into SW (J^2/(s m^4))
+13. SW_CLEAR - Clear-sky shortwave feedback, which adds with SW_CLOUD into SW (J^2/(s m^4))
+14. LHF_MEANEDDY - Mean eddy term of latent heat flux feedback, characterized by the product of disequilibrium and wind speed feedbacks. This is subtracted from the WIND, DISEQ, and EDDY terms to achieve the full LHF feedback (J^2/(s m^4))
+15. LHF_EDDY - Eddy term of latent heat flux feedback, calculated using the product of disequilibrium and wind speed feedbacks (J^2/(s m^4))
+16. LHF_WIND - Wind speed (WISHE) component of latent heat flux feedback (J^2/(s m^4))
+17. LHF_DISEQ - Air-sea enthalpy disequilibrium component of latent heat flux feedback (J^2/(s m^4))
+18. SHF_MEANEDDY - Mean eddy term of sensible heat flux feedback, characterized by the product of disequilibrium and wind speed feedbacks. This is subtracted from the WIND, DISEQ, and EDDY terms to achieve the full SHF feedback (J^2/(s m^4))
+19. SHF_EDDY - Eddy term of sensible heat flux feedback, calculated using the product of disequilibrium and wind speed feedbacks (J^2/(s m^4))
+20. SHF_WIND - Wind speed (WISHE) component of sensible heat flux feedback (J^2/(s m^4))
+21. SHF_DISEQ - Air-sea enthalpy disequilibrium component of sensible heat flux feedback (J^2/(s m^4))
+22. TGEN (function of only f,m) - Day of tropical cyclogenesis in high-f simulations
+23. TLMI (function of only f,m) - Day of lifetime maximum intensity for tropical cyclones in high-f simulations
