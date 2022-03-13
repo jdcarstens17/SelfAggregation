@@ -23,10 +23,27 @@ Similar to CRH_1.5km.nc, this file contains snapshots of column relative humidit
 
 # DomainAverages_TimeSeries.nc
 
+This file contains time series of domain-averaged thermodynamic variables used to characterize the mean state of the various f-plane simulations, averaged daily. The variables are in dimensions of (f,m,t), where f refers to the effective latitude corresponding to that simulation's Coriolis parameter in increasing order (i.e. 0.1 -> 1 -> 2... -> 15 -> 20 degrees), m is the ensemble member, and t is the day. Within an individual f-plane, ensemble members are initialized with a different random distribution of convection. However, "Member 2" of one f-plane has an identical distribution to "Member 2" of another. The 4-degree and 8-degree simulations were extended an additional 20 days, so data are available for these simulations from day 101-120. A NaN value means that data are not available for that ensemble member or time step, as the size of the individual f-plane ensembles varies. There are 14 f-planes and a total of up to 5 ensemble members for each. Data are used to produce Figure 2 and Figure S1 in Carstens and Wing (2022). The data are as follows:
 
+1. CF - Cloud fraction, or fraction of the domain covered by clouds
+2. PREC - Precipitation rate (mm/day)
+3. OLR - Outgoing longwave radiation (W/m^2)
+4. PW - Column precipitable water (mm)
+5. LHF - Latent heat flux (W/m^2)
+6. SHF - Sensible heat flux (W/m^2)
 
 # DomainAverages_VerticalProfiles.nc
 
+This file contains vertical profiles of domain-averaged thermodynamic variables used to characterize the mean state of the various f-plane simulations, averaged over the final 30 days of each simulation. The variables are in dimensions of (f,m,z), where f refers to the effective latitude corresponding to that simulation's Coriolis parameter in increasing order (i.e. 0.1 -> 1 -> 2... -> 15 -> 20 degrees), m is the ensemble member, and z is the altitude. Within an individual f-plane, ensemble members are initialized with a different random distribution of convection. However, "Member 2" of one f-plane has an identical distribution to "Member 2" of another. Though the 4-degree and 8-degree simulations are extended an additional 20 days, the profiles are still averaged from day 70-100 for consistency. A NaN value means that data are not available for that ensemble member, as the size of the individual f-plane ensembles varies. There are 14 f-planes and a total of up to 5 ensemble members for each. Data are used to produce Figure 2 and Figure S1 in Carstens and Wing (2022). The data are as follows:
 
+1. CF_Vertical - Cloud fraction, or fraction of the domain covered by clouds at a given altitude
+2. TEMP - Temperature (K)
+3. THETAE - Equivalent potential temperature (K)
+4. QL - Liquid water mixing ratio (kg/kg)
+5. QI - Ice mixing ratio (kg/kg)
+6. RH - Relative humidity (%)
+7. LQRAD - Longwave radiative heating rate (K/day)
+8. SQRAD - Shortwave radiative heating rate (K/day)
 
 # FMSEVarianceBudget.nc
+
